@@ -7,7 +7,6 @@ using UnityEditor.SceneManagement;
 
 public class Tobj : MonoBehaviour
 {
-    [MenuItem("Rigs of Rods/Import")]
     public static void Import(string file)
     {
         EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene());
@@ -75,7 +74,7 @@ public class Tobj : MonoBehaviour
         }
     }
 
-    public static void Export(string writeFile)
+    public static void Export()
     {
         var root = GameObject.Find("root");
         var terrain = GameObject.Find("Terrain");
@@ -97,9 +96,9 @@ public class Tobj : MonoBehaviour
                         child.name;
             }
 
-            
-            print("Saving file: " + writeFile);
-            File.WriteAllText(writeFile, file);
+
+            print("Saving file: " + EditorPrefs.GetString("projectPath") + "/" + PlayerSettings.productName + ".tobj");
+            File.WriteAllText(EditorPrefs.GetString("projectPath") +"/"+ PlayerSettings.productName + ".tobj", file);
 
             root.transform.position = Vector3.zero;
             root.transform.localScale = Vector3.one;

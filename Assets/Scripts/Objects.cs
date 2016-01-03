@@ -1,8 +1,10 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Xml;
 using UnityEditor;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class Objects : MonoBehaviour
 {
@@ -28,7 +30,7 @@ public class Objects : MonoBehaviour
             fileContent.Add("   }");
             fileContent.Add("}");
 
-            File.WriteAllLines(material.name + ".material", fileContent.ToArray());
+            File.WriteAllLines(EditorPrefs.GetString("projectPath") + "/" + material.name + ".material", fileContent.ToArray());
         }
 
     }
@@ -47,7 +49,9 @@ public class Objects : MonoBehaviour
             NewLineOnAttributes = true
         };
 
-        using (XmlWriter writer = XmlWriter.Create(mesh.name + ".mesh.xml", settings))
+        var file = EditorPrefs.GetString("projectPath") + "/" + mesh.name + ".mesh.xml";
+
+        using (XmlWriter writer = XmlWriter.Create(file, settings))
         {
 
             writer.WriteStartElement("mesh");
@@ -121,5 +125,14 @@ public class Objects : MonoBehaviour
 
             writer.WriteEndElement(); //mesh
         }
+
+        ProcessStartInfo startInfo = new ProcessStartInfo
+        {           
+            FileName = Application.dataPath+"/OgreCommandLineTools/OgreXMLConverter.exe",
+            Arguments = file
+        };
+        Debug.Log("Converting "+ file);
+        Process.Start(startInfo);
+
     }
 }
