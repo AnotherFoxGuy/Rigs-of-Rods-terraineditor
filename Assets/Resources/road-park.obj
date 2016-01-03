@@ -1,0 +1,61 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.0)
+
+mtllib road-park.obj.mtl
+
+# 8 vertex positions
+v  5 5 -3
+v  -5 -5 -3
+v  -5 5 -3
+v  5 -5 -3
+v  5 -5 0.3
+v  -5 -5 0.3
+v  -5 5 0.3
+v  5 5 0.3
+
+# 16 UV coordinates
+vt 0.976563 0.755859 0
+vt 0.46875 0.998047 0
+vt 0.46875 0.755859 0
+vt 0.976563 0.998047 0
+vt 0.982446 0.975835 0
+vt 0.019555 0.839117 0
+vt 0.982446 0.839117 0
+vt 0.019555 0.975835 0
+vt 0.939629 0.823423 0
+vt 0.939629 0.971861 0
+vt 0.02752 0.971861 0
+vt 0.027519 0.823423 0
+vt 1 0 0
+vt 0 1 0
+vt 0 0 0
+vt 1 1 0
+
+# 6 vertex normals
+vn 0 0 -1
+vn 0 -1 0
+vn 0 1 0
+vn -1 0 0
+vn 1 0 0
+vn 0 0 1
+
+# Mesh 'Root_road-park0' with 10 faces
+g Root_road-park0
+usemtl __DefaultEmpty
+f  1/1/1 2/2/1 3/3/1
+f  2/2/1 1/1/1 4/4/1
+f  5/5/2 2/6/2 4/7/2
+f  2/6/2 5/5/2 6/8/2
+f  7/5/3 1/6/3 3/7/3
+f  1/6/3 7/5/3 8/8/3
+f  2/9/4 6/10/4 7/11/4
+f  2/9/4 7/11/4 3/12/4
+f  1/9/5 5/11/5 4/12/5
+f  5/11/5 1/9/5 8/10/5
+
+# Mesh 'Root_road-park1' with 2 faces
+g Root_road-park1
+usemtl __DefaultEmpty
+f  5/13/6 7/14/6 6/15/6
+f  7/14/6 5/13/6 8/16/6
+

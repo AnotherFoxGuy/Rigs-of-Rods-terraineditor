@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: 270ac04f634a1254c9af3b6a36f1b4bb
+timeCreated: 1450950217
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bridge
+    100002: Cube
+    100004: Footbal
+    100006: //RootNode
+    100008: Plane
+    100010: RoadCurveObject
+    100012: RoadObject
+    100014: TerrainObject
+    100016: TerrainObject_001
+    100018: TerrainObject_001_MeshPart0
+    100020: TerrainObject_001_MeshPart1
+    100022: TerrainObject_MeshPart0
+    100024: TerrainObject_MeshPart1
+    100026: TunnelCurveObject
+    100028: TunnelSegmentObject
+    100030: ZZRoadTemplateCurve
+    400000: Bridge
+    400002: Cube
+    400004: Footbal
+    400006: //RootNode
+    400008: Plane
+    400010: RoadCurveObject
+    400012: RoadObject
+    400014: TerrainObject
+    400016: TerrainObject_001
+    400018: TerrainObject_001_MeshPart0
+    400020: TerrainObject_001_MeshPart1
+    400022: TerrainObject_MeshPart0
+    400024: TerrainObject_MeshPart1
+    400026: TunnelCurveObject
+    400028: TunnelSegmentObject
+    400030: ZZRoadTemplateCurve
+    2300000: Bridge
+    2300002: Cube
+    2300004: Footbal
+    2300006: Plane
+    2300008: RoadCurveObject
+    2300010: RoadObject
+    2300012: TerrainObject_001_MeshPart0
+    2300014: TerrainObject_001_MeshPart1
+    2300016: TerrainObject_MeshPart0
+    2300018: TerrainObject_MeshPart1
+    2300020: TunnelCurveObject
+    2300022: TunnelSegmentObject
+    2300024: ZZRoadTemplateCurve
+    3300000: Bridge
+    3300002: Cube
+    3300004: Footbal
+    3300006: Plane
+    3300008: RoadCurveObject
+    3300010: RoadObject
+    3300012: TerrainObject_001_MeshPart0
+    3300014: TerrainObject_001_MeshPart1
+    3300016: TerrainObject_MeshPart0
+    3300018: TerrainObject_MeshPart1
+    3300020: TunnelCurveObject
+    3300022: TunnelSegmentObject
+    3300024: ZZRoadTemplateCurve
+    4300000: Cube
+    4300002: Plane
+    4300004: TerrainObject_001_MeshPart0
+    4300006: TerrainObject_001_MeshPart1
+    4300008: TunnelCurveObject
+    4300010: TunnelSegmentObject
+    4300012: Bridge
+    4300014: RoadCurveObject
+    4300016: RoadObject
+    4300018: TerrainObject_MeshPart0
+    4300020: TerrainObject_MeshPart1
+    4300022: Footbal
+    4300024: ZZRoadTemplateCurve
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
