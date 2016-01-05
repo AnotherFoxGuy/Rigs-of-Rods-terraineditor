@@ -2,8 +2,8 @@
 
 public class postesst : MonoBehaviour
 {
-    public GameObject child;
     public Vector3 add;
+    public GameObject child;
     public bool useEuler;
 
     public void OnDrawGizmosSelected()

@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEditor;
+﻿using UnityEditor;
+using UnityEngine;
 
 public class RoRTerrainEditorTools : EditorWindow
 {
@@ -10,7 +10,7 @@ public class RoRTerrainEditorTools : EditorWindow
         projectPath = EditorPrefs.GetString("projectPath");
     }
 
-    void OnGUI()
+    private void OnGUI()
     {
         GUI.TextField(new Rect(10, 10, 120, 20), projectPath);
 

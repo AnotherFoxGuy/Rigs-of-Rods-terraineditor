@@ -1,15 +1,16 @@
 ﻿using System;
-using UnityEngine;
 using System.IO;
 using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEditor.SceneManagement;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Tobj : MonoBehaviour
 {
     public static void Import(string file)
     {
-        EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene());
+        EditorSceneManager.SaveScene(SceneManager.GetActiveScene());
 
         var root = GameObject.Find("root");
         if (root != null)
@@ -61,7 +62,6 @@ public class Tobj : MonoBehaviour
                     {
                         Debug.LogError("Error while pasting the tobj-file \n" + ex.StackTrace);
                     }
-
                 }
             }
             root.transform.position = Vector3.zero;
@@ -88,17 +88,20 @@ public class Tobj : MonoBehaviour
             var file = "// Created With unity Rigs of Rods Terrain Editor";
             foreach (Transform child in root.transform)
             {
-                var p = child.position;
-                var rot = child.transform.eulerAngles;
-                var r = new Vector3(rot.x + 90, -rot.y + 180, rot.z);
-                file += "\n" + p.x + ", \t" + p.y + ", \t" + p.z + ", \t" + Mathf.Repeat(r.x, 360) + ", \t" +
-                        Mathf.Repeat(r.y, 360) + ", \t" + Mathf.Repeat(r.z, 360) + ", \t" +
-                        child.name;
+                if (child.name != "StartPosition")
+                {
+                    var p = child.position;
+                    var rot = child.transform.eulerAngles;
+                    var r = new Vector3(rot.x + 90, -rot.y + 180, rot.z);
+                    file += "\n" + p.x + ", \t" + p.y + ", \t" + p.z + ", \t" + Mathf.Repeat(r.x, 360) + ", \t" +
+                            Mathf.Repeat(r.y, 360) + ", \t" + Mathf.Repeat(r.z, 360) + ", \t" +
+                            child.name;
+                }
             }
 
 
             print("Saving file: " + EditorPrefs.GetString("projectPath") + "/" + PlayerSettings.productName + ".tobj");
-            File.WriteAllText(EditorPrefs.GetString("projectPath") +"/"+ PlayerSettings.productName + ".tobj", file);
+            File.WriteAllText(EditorPrefs.GetString("projectPath") + "/" + PlayerSettings.productName + ".tobj", file);
 
             root.transform.position = Vector3.zero;
             root.transform.localScale = Vector3.one;
